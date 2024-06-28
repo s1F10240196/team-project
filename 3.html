@@ -1,19 +1,76 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <style type="text/css">
+        #photo {
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            text-align: left;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        #photo img {
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        </style>
+        
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        
+        
+        <script type="text/javascript">
+        $(function(){
+            var setImg = '#photo';
+            var fadeSpeed = 1600;
+            var switchDelay = 5000;
+        
+            $(setImg).children('img').css({opacity:'0'});
+            $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+        
+            setInterval(function(){
+                $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+            },switchDelay);
+        });
+        </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新作スイーツ</title>
+    <link rel="stylesheet" type="text/css" href="cssファイルのURL">
 </head>
 <body>
     <h1>～2024夏新作スイーツ～</h1>
     <h2><ul>FamilyMart</ul></h2>
+    <div id="photo">
+        <img src="https://www.family.co.jp/content/dam/family/goods/1941357.jpg" width="500" height="300" alt="">
+        <img src="https://www.family.co.jp/content/dam/family/goods/1940459.jpg" width="500" height="300" alt="">
+        <img src="https://www.family.co.jp/content/dam/family/goods/1941456.jpg" width="500" height="300" alt="">
+        <img src="https://www.family.co.jp/content/dam/family/goods/1941401.jpg" width="500" height="300" alt="">
+        </div>
     <p><a
     href="https://www.family.co.jp/goods/dessert.html#dummy">FamilyMartの新作のリンク</a></p>
+   
+        
     <h2><ul>セブンイレブン</ul></h2>
+    <div id="photo">
+        <img src="https://img.7api-01.dp1.sej.co.jp/item-image/113632/4CC9ED0DE4B5E12F9642C1E1239840C4.jpg" width="500" height="300" alt="">
+        <img src="https://img.7api-01.dp1.sej.co.jp/item-image/111820/88AE0D5D90BC47D3D4C9E61AF0DB77BF.jpg" width="500" height="300" alt="">
+        <img src="https://img.7api-01.dp1.sej.co.jp/item-image/112212/CCBC106BE90F1C51B9F2498F8BACA2ED.jpg" width="500" height="300" alt="">
+        <img src="https://img.7api-01.dp1.sej.co.jp/item-image/110576/40EFBBD726E73B5275822CC813C89E94.jpg" width="500" height="300" alt="">
+        </div>
     <p><a
     href="https://www.sej.co.jp/products/a/sweets/">セブンイレブンの新作のリンク</a></p>
     <h2><ul>ローソン</ul></h2>
+    <div id="photo">
+        <img src="https://www.lawson.co.jp/recommend/original/detail/img/l756764.jpg" width="500" height="300" alt="">
+        <img src="https://www.lawson.co.jp/recommend/original/detail/img/l756762.jpg" width="500" height="300" alt="">
+        <img src="https://www.lawson.co.jp/recommend/original/detail/img/l757448.jpg" width="500" height="300" alt="">
+        <img src="https://www.lawson.co.jp/recommend/original/detail/img/l758126.jpg" width="500" height="300" alt="">
+        <img src="https://www.lawson.co.jp/recommend/original/detail/img/l758512.jpg" width="500" height="300" alt="">
+        </div>
     <p><a
     href="https://www.lawson.co.jp/recommend/new/list/1488626_5162.html">ローソンの新作のリンク</a></p>
     </h2>
