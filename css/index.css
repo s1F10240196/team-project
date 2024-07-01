@@ -7,10 +7,12 @@
     flex-direction: row;
 }
 
-.sidber{
-    width: 30%;
+.sidbar{
+    width: 15%;
     margin:10px 0 10px 0;
-}
+    background-color: rgb(225, 222, 222);
+    margin: 0;
+  }
 
 .content{
     width: 70%;
@@ -19,4 +21,16 @@
 
 #top{
     text-align: center;
+    background-color:turquoise;
+    padding:10px;
+    margin:0;
+}
+
+body{
+  margin:0;
+}
+
+#sidber2{
+  margin:0;
+  padding:0;
 }
